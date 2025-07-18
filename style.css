@@ -63,10 +63,12 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
+  width: 12vw;
+  max-width: 60px;
+  height: 12vw;
+  max-height: 60px;
+  bottom: 4vw;
+  right: 4vw;
   background-color: #25d366;
   color: #fff;
   border-radius: 50%;
@@ -84,7 +86,7 @@ body {
 }
 
 .whatsapp-icon {
-  width: 35px;
-  height: 35px;
+  width: 60%;
+  height: 60%;
 }
 
