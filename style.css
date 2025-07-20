@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgb(49, 18, 134);
+  background-color: #242421;
   align-items: center;
 }
 
@@ -63,17 +63,21 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: clamp(50px, 12vw, 60px);
-  height: clamp(50px, 12vw, 60px);
+  width: 12vw;
+  max-width: 60px;
+  height: 12vw;
+  max-height: 60px;
+  bottom: 4vw;
+  right: 4vw;
   background-color: #25d366;
+  color: #fff;
   border-radius: 50%;
+  text-align: center;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
   transition: transform 0.3s ease;
 }
 
@@ -84,6 +88,144 @@ body {
 .whatsapp-icon {
   width: 60%;
   height: 60%;
+} 
+
+/*apartado de productos*/
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  background: rgb(128, 128, 128);
+  width: 220px;
+  height: 320px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box img {
+  max-width: 100%;
+  max-height: 200px;
   object-fit: contain;
 }
 
+.button {
+  flex: 1;
+  font-size: 1em;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 35px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: rgba(110, 110, 110, 0.3);
+  width: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.bike1 {
+  width: 300px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+
+
+.texto {
+  font-family: Roboto;
+  font-weight: 500;
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+  position: static; /* para que no se desplace hacia abajo fuera del flujo */
+}
+
+.grid2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px; /* igual que .button */
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.grid2:hover {
+  background: rgba(110, 110, 110, 0.3);
+}
